@@ -48,8 +48,7 @@ def accuracy(predictions, labels):
 
 with graph.as_default():
 
-  # Input data. For the training data, we use a placeholder that will be fed
-  # at run time with a training minibatch.
+  # Input data. For the training data use a placeholder that will be fed at run time
   tf_train_dataset = tf.placeholder(tf.float32,
                                     shape=(batch_size, image_size * image_size))
   tf_train_labels = tf.placeholder(tf.float32, shape=(batch_size, num_labels))
