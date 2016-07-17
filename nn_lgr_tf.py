@@ -88,11 +88,7 @@ with tf.Session(graph=graph) as session:
     # Generate a minibatch.
     batch_data = train_dataset[offset:(offset + batch_size), :]
     batch_labels = train_labels[offset:(offset + batch_size), :]
-
-    """ Prepare a dictionary telling the session where to feed the minibatch.
-     The key of the dictionary is the placeholder node of the graph to be fed,
-     and the value is the numpy array to feed to it."""
-
+"""dictionary prepared and filled during the session"""
     feed_dict = {tf_train_dataset : batch_data, tf_train_labels : batch_labels}
     _, l, predictions = session.run(
       [optimizer, loss, train_prediction], feed_dict=feed_dict)
