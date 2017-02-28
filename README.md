@@ -1,2 +1,2 @@
-# NN_tensorflow
-A neural network for classification built using tensorflow 
+# NN_tensorflow 
+A classifier(neural network) built using tensorflow.
